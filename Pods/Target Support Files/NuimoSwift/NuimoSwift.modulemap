@@ -1,6 +1,0 @@
-framework module NuimoSwift {
-  umbrella header "NuimoSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}

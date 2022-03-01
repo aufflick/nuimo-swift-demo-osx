@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		461699A11BD4D7DB0028DE08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4616999F1BD4D7DB0028DE08 /* Main.storyboard */; };
 		46FD8EB91BD4EB4A004EA6B4 /* NuimoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FD8EB81BD4EB4A004EA6B4 /* NuimoTableViewDataSource.swift */; };
 		46FD8EBB1BD4EC3C004EA6B4 /* NuimoTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FD8EBA1BD4EC3C004EA6B4 /* NuimoTableViewDelegate.swift */; };
-		68B3F18C258B34D98E0AD3AC /* Pods_NuimoDemoOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A845B01C6DEB832E7826BDA /* Pods_NuimoDemoOSX.framework */; };
+		6461D85E27CE09560060B9B2 /* NuimoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6461D85D27CE09560060B9B2 /* NuimoSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +23,8 @@
 		4616999D1BD4D7DB0028DE08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		461699A01BD4D7DB0028DE08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		461699A21BD4D7DB0028DE08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46FD8EB81BD4EB4A004EA6B4 /* NuimoTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuimoTableViewDataSource.swift; sourceTree = "<group>"; };
+		46FD8EB81BD4EB4A004EA6B4 /* NuimoTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = NuimoTableViewDataSource.swift; sourceTree = "<group>"; tabWidth = 4; };
 		46FD8EBA1BD4EC3C004EA6B4 /* NuimoTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuimoTableViewDelegate.swift; sourceTree = "<group>"; };
-		4A845B01C6DEB832E7826BDA /* Pods_NuimoDemoOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NuimoDemoOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D96EF6776FE2ECAB8CD3F4E /* Pods-NuimoDemoOSX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuimoDemoOSX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NuimoDemoOSX/Pods-NuimoDemoOSX.debug.xcconfig"; sourceTree = "<group>"; };
-		9B58A87FC032DC85D9741724 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABEF398302C91F5259041E22 /* Pods-NuimoDemoOSX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NuimoDemoOSX.release.xcconfig"; path = "Pods/Target Support Files/Pods-NuimoDemoOSX/Pods-NuimoDemoOSX.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B3F18C258B34D98E0AD3AC /* Pods_NuimoDemoOSX.framework in Frameworks */,
+				6461D85E27CE09560060B9B2 /* NuimoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,10 +42,10 @@
 		4616998D1BD4D7DB0028DE08 = {
 			isa = PBXGroup;
 			children = (
+				6461D85627CDFFC80060B9B2 /* Packages */,
 				461699981BD4D7DB0028DE08 /* NuimoDemoOSX */,
 				461699971BD4D7DB0028DE08 /* Products */,
 				B6E10FB97AA834C25D8866C2 /* Frameworks */,
-				D7BEE706148AE54DB97C125F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,22 +71,18 @@
 			path = NuimoDemoOSX;
 			sourceTree = "<group>";
 		};
+		6461D85627CDFFC80060B9B2 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		B6E10FB97AA834C25D8866C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B58A87FC032DC85D9741724 /* Pods.framework */,
-				4A845B01C6DEB832E7826BDA /* Pods_NuimoDemoOSX.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D7BEE706148AE54DB97C125F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7D96EF6776FE2ECAB8CD3F4E /* Pods-NuimoDemoOSX.debug.xcconfig */,
-				ABEF398302C91F5259041E22 /* Pods-NuimoDemoOSX.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,18 +92,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 461699A51BD4D7DB0028DE08 /* Build configuration list for PBXNativeTarget "NuimoDemoOSX" */;
 			buildPhases = (
-				986C67E577D7E563D166909B /* [CP] Check Pods Manifest.lock */,
 				461699921BD4D7DB0028DE08 /* Sources */,
 				461699931BD4D7DB0028DE08 /* Frameworks */,
 				461699941BD4D7DB0028DE08 /* Resources */,
-				8C01FA4E1714E379A93FC156 /* [CP] Embed Pods Frameworks */,
-				AD8E4C2B57CFB831788DA4F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6461D85927CE00A10060B9B2 /* PBXTargetDependency */,
 			);
 			name = NuimoDemoOSX;
+			packageProductDependencies = (
+				6461D85D27CE09560060B9B2 /* NuimoSwift */,
+			);
 			productName = NuimoDemoOSX;
 			productReference = 461699961BD4D7DB0028DE08 /* NuimoDemoOSX.app */;
 			productType = "com.apple.product-type.application";
@@ -123,7 +116,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = senic;
 				TargetAttributes = {
 					461699951BD4D7DB0028DE08 = {
@@ -134,13 +127,16 @@
 			};
 			buildConfigurationList = 461699911BD4D7DB0028DE08 /* Build configuration list for PBXProject "NuimoDemoOSX" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
 			mainGroup = 4616998D1BD4D7DB0028DE08;
+			packageReferences = (
+				6461D85C27CE09560060B9B2 /* XCRemoteSwiftPackageReference "nuimo-swift" */,
+			);
 			productRefGroup = 461699971BD4D7DB0028DE08 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,54 +158,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8C01FA4E1714E379A93FC156 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NuimoDemoOSX/Pods-NuimoDemoOSX-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		986C67E577D7E563D166909B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AD8E4C2B57CFB831788DA4F5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NuimoDemoOSX/Pods-NuimoDemoOSX-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		461699921BD4D7DB0028DE08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -223,6 +171,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6461D85927CE00A10060B9B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 6461D85827CE00A10060B9B2 /* NuimoSwift */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4616999F1BD4D7DB0028DE08 /* Main.storyboard */ = {
@@ -240,17 +195,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -272,12 +239,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -285,17 +252,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -311,38 +290,43 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_VERSION = 2.3;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		461699A61BD4D7DB0028DE08 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D96EF6776FE2ECAB8CD3F4E /* Pods-NuimoDemoOSX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = NuimoDemoOSX/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.senic.NuimoDemoOSX;
 				PRODUCT_NAME = NuimoDemoOSX;
-				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		461699A71BD4D7DB0028DE08 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABEF398302C91F5259041E22 /* Pods-NuimoDemoOSX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = NuimoDemoOSX/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.senic.NuimoDemoOSX;
 				PRODUCT_NAME = NuimoDemoOSX;
-				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -368,6 +352,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6461D85C27CE09560060B9B2 /* XCRemoteSwiftPackageReference "nuimo-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aufflick/nuimo-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6461D85827CE00A10060B9B2 /* NuimoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NuimoSwift;
+		};
+		6461D85D27CE09560060B9B2 /* NuimoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6461D85C27CE09560060B9B2 /* XCRemoteSwiftPackageReference "nuimo-swift" */;
+			productName = NuimoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4616998E1BD4D7DB0028DE08 /* Project object */;
 }

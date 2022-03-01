@@ -12,18 +12,18 @@ import NuimoSwift
 class NuimoTableViewDataSource : NSObject, NSTableViewDataSource {
     var controllers = [NuimoController]()
     
-    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+    func numberOfRows(in tableView: NSTableView) -> Int {
         return controllers.count
     }
     
-    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         switch tableColumn?.identifier {
-        case .Some("uuid"): return controllers[row].uuid
-        case .Some("state"): return [
-            .Connecting: "Connecting...",
-            .Connected: "Connected",
-            .Disconnecting: "Disconnecting...",
-            .Disconnected: "Disconnected"
+        case NSUserInterfaceItemIdentifier("uuid"): return controllers[row].uuid
+        case NSUserInterfaceItemIdentifier("state"): return [
+            .connecting: "Connecting...",
+            .connected: "Connected",
+            .disconnecting: "Disconnecting...",
+            .disconnected: "Disconnected"
             ][controllers[row].connectionState]
         default: return nil
         }

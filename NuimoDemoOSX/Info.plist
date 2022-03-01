@@ -28,6 +28,8 @@
 	<string>Copyright © 2015 senic. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Bluetooth is required to connect to Nuimo</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

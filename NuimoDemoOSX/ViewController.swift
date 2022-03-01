@@ -9,7 +9,7 @@
 import Cocoa
 import NuimoSwift
 
-class ViewController: NSViewController, NuimoDiscoveryDelegate, NuimoControllerDelegate {
+class ViewController: NSViewController {
 
     @IBOutlet weak var discoveryButton: NSButton!
     @IBOutlet weak var discoveryProgressIndicator: NSProgressIndicator!
@@ -25,7 +25,7 @@ class ViewController: NSViewController, NuimoDiscoveryDelegate, NuimoControllerD
         discoveryManager.delegate = self
     }
     
-    @IBAction func startStopDiscovery(sender: AnyObject) {
+    @IBAction func startStopDiscovery(_ sender: AnyObject) {
         isDiscovering = !isDiscovering
         if (isDiscovering) {
             discoveryManager.startDiscovery()
@@ -40,15 +40,17 @@ class ViewController: NSViewController, NuimoDiscoveryDelegate, NuimoControllerD
     }
 
     func log(controller: NuimoController, message: String) {
-        textView.textStorage?.appendAttributedString(NSAttributedString(string: "[\(controller.uuid)] \(message)\n"))
+      textView.textStorage?.append(NSAttributedString(string: "[\(controller.uuid)] \(message)\n"))
         textView.scrollToEndOfDocument(self)
     }
     
-    //MARK: NuimoDiscoveryDelegate
+  
+}
+extension ViewController: NuimoDiscoveryDelegate {
 
-    func nuimoDiscoveryManager(discovery: NuimoDiscoveryManager, didDiscoverNuimoController controller: NuimoController) {
-        log(controller, message: "Found controller")
-        if controller.connectionState == .Disconnected {
+  func nuimoDiscoveryManager(_ discovery: NuimoDiscoveryManager, didDiscoverNuimoController controller: NuimoController) {
+    log(controller: controller, message: "Found controller")
+    if controller.connectionState == .disconnected {
             controller.delegate = self
             controller.connect()
         }
@@ -60,11 +62,23 @@ class ViewController: NSViewController, NuimoDiscoveryDelegate, NuimoControllerD
         (tableView.dataSource as! NuimoTableViewDataSource).controllers = (tableView.dataSource as! NuimoTableViewDataSource).controllers.filter{ $0 !== controller }
         tableView.reloadData()
     }
-    
-    //MARK: NuimoControllerDelegate
-    
-    func nuimoController(controller: NuimoController, didReceiveGestureEvent event: NuimoGestureEvent) {
-        log(controller, message: "\(event.gesture.identifier), value: \(event.value ?? 0)")
+}
+
+extension ViewController: NuimoControllerDelegate {
+  func nuimoController(_ controller: NuimoController, didChangeConnectionState state: NuimoConnectionState, withError error: Error?) {
+    tableView.reloadData()
+  }
+  
+  func nuimoController(_ controller: NuimoController, didUpdateBatteryLevel batteryLevel: Int) {
+    print("battery level: \(batteryLevel)")
+  }
+  
+  func nuimoControllerDidDisplayLEDMatrix(_ controller: NuimoController) {
+    print("did display matrix")
+  }
+  
+  func nuimoController(_ controller: NuimoController, didReceiveGestureEvent event: NuimoGestureEvent) {
+      log(controller: controller, message: "\(event.gesture.identifier), value: \(event.value ?? 0)")
     }
 
     func nuimoControllerDidConnect(controller: NuimoController) {
